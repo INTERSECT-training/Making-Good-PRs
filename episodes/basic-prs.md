@@ -6,15 +6,15 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- "Become familiar with basic actions on GitHub Pull Requests."
+- Become familiar with basic actions on GitHub Pull Requests.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- "How do you open a PR?"
-- "How do you interact with a PR?"
-- "How do you merge a PR?"
+- How do you open a PR?
+- How do you interact with a PR?
+- How do you merge a PR?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -40,17 +40,17 @@ First we will make a change to a file in our repository. We click on the
 preferred file in the repository and hit the "Edit" pencil in the top-right
 corner.
 
-![](fig/prs-edit-file.png){alt='File edit button highlight'}
+![](fig/prs-edit-file.png){alt='On a README file, the File edit button in the top-right is highlighted'}
 
 Once the file is edited to our satisfaction, we click "Commit changes...",
 which pops up a dialog box asking us to fill in the commit message.
 
-![](fig/prs-commit-dialog.png){alt='Commit changes pop-up dialog'}
+![](fig/prs-commit-dialog.png){alt='Commit changes pop-up dialog with the sections Commit message, Extended commit message, and the radio option for "Commit directly to `main`" or "Create a new branch" circled'}
 
 Rather than committing directly to the main branch, we will instead make a
 new branch with the changes.
 
-![](fig/prs-new-branch-dialog.png){alt='Commit changes/new branch pop-up dialog'}
+![](fig/prs-new-branch-dialog.png){alt='Commit changes pop-up dialog, zoomed in on the "Create a new branch" radio button when clicked, which defaults a branch name that can be changed'}
 
 GitHub will autopopulate a branch name for us. We can choose to keep it or
 change it.
@@ -60,7 +60,7 @@ change it.
 Once we click "Commit changes," the page will load the "Open a pull request"
 page with our commit message as the title.
 
-![](fig/prs-new-pr-default.png){alt='Open a pull request page reloaded'}
+![](fig/prs-new-pr-default.png){alt='Open a pull request page loaded - shows the commit message from the previous step as the Title, empty "Write" section'}
 
 A new PR has several parts:
 
@@ -70,7 +70,7 @@ A new PR has several parts:
 
 To open the issue, click the "Create pull request" button.
 
-![](fig/prs-new-pr-view.png){alt='Newly opened PR with proposed changes'}
+![](fig/prs-new-pr-view.png){alt='Newly opened PR with proposed changes - main page shows the Title, description, list of commits, and merge options'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -96,21 +96,21 @@ have commented on or subscribed to the PR.
 Simply click in the comment box at the bottom of the PR, type whatever
 you'd like, and click "Comment."
 
-![](fig/add-pr-comment.png){alt='Add a comment to a PR'}
+![](fig/add-pr-comment.png){alt='Comment box on a Pull Request - Write section includes a statement, "I am writing a comment on this PR"'}
 
 Another useful feature for GitHub is linking Issues and PRs. This is actually
 very simple. In the PR's description or in a comment, mention the relevant
 Issue using `#` and the Issue number.
 
-![](fig/link-pr-to-issue.png){alt='Link a PR to an Issue'}
+![](fig/link-pr-to-issue.png){alt='An image using the pound symbol (#) to pop-up options for linking other Issues or Pull Requests'}
 
 This will create a link to the Issue.
 
-![](fig/linked-issue.png){alt='Link to the Issue'}
+![](fig/linked-issue.png){alt='An image showing the pop-up to a linked issue. The pop-up shows a small preview of the linked issue that includes the title and some portion of the description.'}
 
 You can also edit the information in the right-hand column.
 
-![](fig/prs-right-hand-column.png){alt='Information block with reviewers, assignees, labels, projects'}
+![](fig/prs-right-hand-column.png){alt='Information block on the right-hand side that includes reviewers, assignees, labels, projects'}
 
 We will cover the following options:
 
@@ -148,11 +148,11 @@ are going to skip it for now.
 
 Merging a PR is quite simple - just click the "Merge pull request" button.
 
-![](fig/merge-pr-no-review.png){alt='A simple merge with our exercise PR'}
+![](fig/merge-pr-no-review.png){alt='The merge options on the example PR that shows that the branch has no conflicts and the "Merge pull request" button highlighted'}
 
 The dropdown on the "Merge pull request" shows several options:
 
-![](fig/merge-pr-options.png){alt='Merge PR dropdown with three options'}
+![](fig/merge-pr-options.png){alt='Merge PR dropdown with three options - Create a merge commit, Squash and merge, Rebase and merge'}
 
 We will not cover all of these options here, but read more about them in
 [GitHub's official documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request#merging-a-pull-request).
@@ -161,7 +161,7 @@ When you click the "Merge pull request" button, a new dialog box appears,
 prompting for the commit message. Once you have made the preferred edits,
 click "Confirm merge."
 
-![](fig/confirm-merge-dialog.png){alt='Confirm merge dialog box'}
+![](fig/confirm-merge-dialog.png){alt='Confirm merge dialog box - shows the merge commit message, an extended message, and a button to confirm the merge'}
 
 The changes have been incorporated back into the `main` branch.
 
@@ -181,8 +181,8 @@ You now know the basic actions you can take on a GitHub Pull Request!
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- "New PRs can be opened in a repository from a branch or a fork."
-- "Text on PRs use Markdown styling for formatting."
-- "A user can interact with PRs in multiple ways: commenting, assigning reviewers, linking to other issues and pull requests, and more."
+- New PRs can be opened in a repository from a branch or a fork.
+- Text on PRs use Markdown styling for formatting.
+- A user can interact with PRs in multiple ways: commenting, assigning reviewers, linking to other issues and pull requests, and more.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
