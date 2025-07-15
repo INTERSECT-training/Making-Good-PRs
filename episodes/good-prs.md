@@ -5,14 +5,14 @@ exercises: 0
 ---
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- "Become familiar with what makes a 'good' PR."
+- Become familiar with what makes a 'good' PR.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- "What does it mean to be a 'good' PR?"
-- "What should you do to make a 'good' PR?"
+- What does it mean to be a 'good' PR?
+- What should you do to make a 'good' PR?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -88,8 +88,8 @@ streamline the review process.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- "A pull request should contain _ONE_ cohesive change."
-- "A pull request should, ideally, be quickly reviewable."
-- "A pull request description should give an overview of what, how, and why something changed."
+- A pull request should contain _ONE_ cohesive change.
+- A pull request should, ideally, be quickly reviewable.
+- A pull request description should give an overview of what, how, and why something changed.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
