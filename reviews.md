@@ -5,14 +5,14 @@ exercises: 5
 ---
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- "Become familiar with the code review process on GitHub."
+- Become familiar with the code review process on GitHub.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- "How do you add reviews to a PR?"
-- "How do you address requested changes?"
+- How do you add reviews to a PR?
+- How do you address requested changes?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -22,7 +22,7 @@ Requesting a review can be done within a PR. Click on a PR, then click on
 "Reviewers" on the right-hand side. Here you can type in and select
 reviewers for your PR.
 
-![](fig/prs-reviewers.png){alt='Reviewers menu on a Pull Request'}
+![](fig/prs-reviewers.png){alt='Reviewers menu on a Pull Request - includes the text "Select up to 15 reviewers" and a search bar in which a user can start type a GitHub handle'}
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
@@ -38,16 +38,16 @@ reviews from "Collaborators" on your repository.
 To add a review to a PR, navigate to the PR in question and click on "Files
 changed."
 
-![](fig/prs-files-changed.png){alt='PR page with files changed highlighted'}
+![](fig/prs-files-changed.png){alt='The Pull Request main page with the "Files Changed" tab (far-right option) circled'}
 
 Within this page, when you hover over a line of text, a `+` button will appear
 to the left.
 
-![](fig/prs-add-comment-line.png){alt='PR add comment plus symbol for reviews'}
+![](fig/prs-add-comment-line.png){alt='Small example of what the plus (+) symbol looks like for adding comments to a specific line on a PR'}
 
 Click on the `+` button to add a comment to that line.
 
-![](fig/prs-comment-line-6.png){alt='Adding a review comment to line 6'}
+![](fig/prs-comment-line-6.png){alt='The pop-up dialog to add a comment on Line 6 - includes a Write and Preview section plus buttons to Cancel, Add single comment, and Start a review'}
 
 At this point, you can "Cancel", "Add single comment", or "Start a review." If
 you click "Add single comment", the comment will be added without rendering
@@ -93,9 +93,9 @@ Add a few comments to one of their PRs and submit the review, requesting changes
 Review comments can be viewed in the "Conversation" tab as well as in the
 "Files changed" tab. 
 
-![](fig/prs-review-convo-page.png){alt='PR review comments on Conversation tab'}
+![](fig/prs-review-convo-page.png){alt='An image displaying the main Pull request page (Conversation), on which the review comments appear lumped together with a preview of each line/comment in its own box'}
 
-![](fig/prs-review-files-changed-page.png){alt='PR review comments on Files changed tab'}
+![](fig/prs-review-files-changed-page.png){alt='An image displaying the Files changed page, on which the review comments appear on each line on which they were added'}
 
 Incorporating requested changes can be done via command line or through the
 GitHub GUI. Once addressed and pushed, you can resolved the different conversations
@@ -113,7 +113,7 @@ And that’s all, folks! You now know much more about GitHub Pull Requests.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- "Code reviews are integrated into GitHub Pull requests."
-- "Reviewers can approve, request changes, or simply add comments as part of the review process."
+- Code reviews are integrated into GitHub Pull requests.
+- Reviewers can approve, request changes, or simply add comments as part of the review process.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
