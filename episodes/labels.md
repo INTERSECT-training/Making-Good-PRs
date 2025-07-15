@@ -6,15 +6,15 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- "Learn how to use labels for GitHub PRs."
-- "Learn how to create a PR template."
+- Learn how to use labels for GitHub PRs.
+- Learn how to create a PR template.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- "How do you assign labels to PRs?"
-- "How do you create PR templates?"
+- How do you assign labels to PRs?
+- How do you create PR templates?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -39,7 +39,7 @@ From [GitHub's official documentation](https://docs.github.com/en/issues/using-l
 
 These labels can be viewed from the Issues and Pull Requests pages.
 
-![](fig/prs-labels.png){alt='The PR page with the labels option highlighted'}
+![](fig/prs-labels.png){alt='The PR page with the labels option ("Labels - 9") highlighted'}
 
 ## Using Labels
 
@@ -49,7 +49,7 @@ From the main Pull requests page, simply checkmark the PR, hit the "Label"
 dropdown, select your preferred label(s), and click outside of the
 dropdown.
 
-![](fig/apply-labels-prs-page.png){alt='Apply Labels from the main PRs page'}
+![](fig/apply-labels-prs-page.png){alt='Display of the "Apply Labels" dropdown from the main Pull requests page - shows all of the label colors and names'}
 
 To apply within a single PR, click on the PR to open it. Then you
 will see the "Labels" option on the right-hand side.
@@ -57,7 +57,7 @@ will see the "Labels" option on the right-hand side.
 Click on "Labels". A dropdown will appear in which you can select or deselect
 your preferred label(s).
 
-![](fig/label-dropdown-in-pr.png){alt='Label dropdown within a single issue'}
+![](fig/label-dropdown-in-pr.png){alt='Cog-wheel option selected to reveal the label dropdown within a single pull request'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -100,7 +100,7 @@ Read more about it on [freeCodeCamp](https://www.freecodecamp.org/news/how-to-us
 
 In the `.github` repository, we will add a new file named `PULL_REQUEST_TEMPLATE.md`.
 
-![](fig/github-hidden-dir-add-file.png){alt='Add a new file to the .github directory'}
+![](fig/github-hidden-dir-add-file.png){alt='Through the GitHub GUI, "Add file" button selected, with "Create new file" highlighted, within the .github directory'}
 
 You can now put whatever content you desire in the template. Some examples are:
 
@@ -128,12 +128,12 @@ includes:
 Now when a new PR is opened, the "Write" section will autofill with our
 template.
 
-![](fig/new-pr-with-template.png){alt='New PR with template'}
+![](fig/new-pr-with-template.png){alt='New PR with the template above - default Title, Write section includes "Description", checklist, and extra Markdown comment that won't render in the preview'}
 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- "Labelling PRs can help with prioritization and organization."
-- "PR Templates can provide clear instructions for steps, expectations, and more."
+- Labelling PRs can help with prioritization and organization.
+- PR Templates can provide clear instructions for steps, expectations, and more.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
