@@ -319,7 +319,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Basic Pull Requests</h1>
-        <p>Last updated on 2024-06-27 |
+        <p>Last updated on 2025-07-15 |
 
         <a href="https://github.com/INTERSECT-training/Making-Good-PRs/edit/main/episodes/basic-prs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -340,9 +340,9 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>“How do you open a PR?”</li>
-<li>“How do you interact with a PR?”</li>
-<li>“How do you merge a PR?”</li>
+<ul><li>How do you open a PR?</li>
+<li>How do you interact with a PR?</li>
+<li>How do you merge a PR?</li>
 </ul></div>
 </div>
 </div>
@@ -350,7 +350,7 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>“Become familiar with basic actions on GitHub Pull Requests.”</li>
+<ul><li>Become familiar with basic actions on GitHub Pull Requests.</li>
 </ul></div>
 </div>
 </div>
@@ -379,19 +379,19 @@ Do whatever feels right for you!</p>
 <p>First we will make a change to a file in our repository. We click on
 the preferred file in the repository and hit the “Edit” pencil in the
 top-right corner.</p>
-<figure><img src="../fig/prs-edit-file.png" alt="File edit button highlight" class="figure mx-auto d-block"></figure><p>Once the file is edited to our satisfaction, we click “Commit
+<figure><img src="../fig/prs-edit-file.png" alt="On a README file, the File edit button in the top-right is highlighted" class="figure mx-auto d-block"></figure><p>Once the file is edited to our satisfaction, we click “Commit
 changes…”, which pops up a dialog box asking us to fill in the commit
 message.</p>
-<figure><img src="../fig/prs-commit-dialog.png" alt="Commit changes pop-up dialog" class="figure mx-auto d-block"></figure><p>Rather than committing directly to the main branch, we will instead
+<figure><img src="../fig/prs-commit-dialog.png" alt='Commit changes pop-up dialog with the sections Commit message, Extended commit message, and the radio option for "Commit directly to `main`" or "Create a new branch" circled' class="figure mx-auto d-block"></figure><p>Rather than committing directly to the main branch, we will instead
 make a new branch with the changes.</p>
-<figure><img src="../fig/prs-new-branch-dialog.png" alt="Commit changes/new branch pop-up dialog" class="figure mx-auto d-block"></figure><p>GitHub will autopopulate a branch name for us. We can choose to keep
+<figure><img src="../fig/prs-new-branch-dialog.png" alt='Commit changes pop-up dialog, zoomed in on the "Create a new branch" radio button when clicked, which defaults a branch name that can be changed' class="figure mx-auto d-block"></figure><p>GitHub will autopopulate a branch name for us. We can choose to keep
 it or change it.</p>
 </div>
 <div class="section level3">
 <h3 id="make-a-pr">Make a PR<a class="anchor" aria-label="anchor" href="#make-a-pr"></a></h3>
 <p>Once we click “Commit changes,” the page will load the “Open a pull
 request” page with our commit message as the title.</p>
-<figure><img src="../fig/prs-new-pr-default.png" alt="Open a pull request page reloaded" class="figure mx-auto d-block"></figure><p>A new PR has several parts:</p>
+<figure><img src="../fig/prs-new-pr-default.png" alt='Open a pull request page loaded - shows the commit message from the previous step as the Title, empty "Write" section' class="figure mx-auto d-block"></figure><p>A new PR has several parts:</p>
 <ul><li>
 <em>Title</em>: This will display on the main “Pull request”
 page.</li>
@@ -402,7 +402,7 @@ GitHub support Markdown formatting.</li>
 <em>Preview</em>: This will preview the Markdown-rendered version of
 the details.</li>
 </ul><p>To open the issue, click the “Create pull request” button.</p>
-<figure><img src="../fig/prs-new-pr-view.png" alt="Newly opened PR with proposed changes" class="figure mx-auto d-block"></figure><div id="open-a-new-pr" class="callout discussion">
+<figure><img src="../fig/prs-new-pr-view.png" alt="Newly opened PR with proposed changes - main page shows the Title, description, list of commits, and merge options" class="figure mx-auto d-block"></figure><div id="open-a-new-pr" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -425,12 +425,12 @@ interact with the PR author, the assignee, and others who have commented
 on or subscribed to the PR.</p>
 <p>Simply click in the comment box at the bottom of the PR, type
 whatever you’d like, and click “Comment.”</p>
-<figure><img src="../fig/add-pr-comment.png" alt="Add a comment to a PR" class="figure mx-auto d-block"></figure><p>Another useful feature for GitHub is linking Issues and PRs. This is
+<figure><img src="../fig/add-pr-comment.png" alt='Comment box on a Pull Request - Write section includes a statement, "I am writing a comment on this PR"' class="figure mx-auto d-block"></figure><p>Another useful feature for GitHub is linking Issues and PRs. This is
 actually very simple. In the PR’s description or in a comment, mention
 the relevant Issue using <code>#</code> and the Issue number.</p>
-<figure><img src="../fig/link-pr-to-issue.png" alt="Link a PR to an Issue" class="figure mx-auto d-block"></figure><p>This will create a link to the Issue.</p>
-<figure><img src="../fig/linked-issue.png" alt="Link to the Issue" class="figure mx-auto d-block"></figure><p>You can also edit the information in the right-hand column.</p>
-<figure><img src="../fig/prs-right-hand-column.png" alt="Information block with reviewers, assignees, labels, projects" class="figure mx-auto d-block"></figure><p>We will cover the following options:</p>
+<figure><img src="../fig/link-pr-to-issue.png" alt="An image using the pound symbol (#) to pop-up options for linking other Issues or Pull Requests" class="figure mx-auto d-block"></figure><p>This will create a link to the Issue.</p>
+<figure><img src="../fig/linked-issue.png" alt="An image showing the pop-up to a linked issue. The pop-up shows a small preview of the linked issue that includes the title and some portion of the description." class="figure mx-auto d-block"></figure><p>You can also edit the information in the right-hand column.</p>
+<figure><img src="../fig/prs-right-hand-column.png" alt="Information block on the right-hand side that includes reviewers, assignees, labels, projects" class="figure mx-auto d-block"></figure><p>We will cover the following options:</p>
 <table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr class="header"><th>Options</th>
 <th>Purpose</th>
 </tr></thead><tbody><tr class="odd"><td>Reviewers</td>
@@ -472,14 +472,14 @@ later, though, so we are going to skip it for now.</p>
 </div>
 <p>Merging a PR is quite simple - just click the “Merge pull request”
 button.</p>
-<figure><img src="../fig/merge-pr-no-review.png" alt="A simple merge with our exercise PR" class="figure mx-auto d-block"></figure><p>The dropdown on the “Merge pull request” shows several options:</p>
-<figure><img src="../fig/merge-pr-options.png" alt="Merge PR dropdown with three options" class="figure mx-auto d-block"></figure><p>We will not cover all of these options here, but read more about them
+<figure><img src="../fig/merge-pr-no-review.png" alt='The merge options on the example PR that shows that the branch has no conflicts and the "Merge pull request" button highlighted' class="figure mx-auto d-block"></figure><p>The dropdown on the “Merge pull request” shows several options:</p>
+<figure><img src="../fig/merge-pr-options.png" alt="Merge PR dropdown with three options - Create a merge commit, Squash and merge, Rebase and merge" class="figure mx-auto d-block"></figure><p>We will not cover all of these options here, but read more about them
 in <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request#merging-a-pull-request" class="external-link">GitHub’s
 official documentation</a>.</p>
 <p>When you click the “Merge pull request” button, a new dialog box
 appears, prompting for the commit message. Once you have made the
 preferred edits, click “Confirm merge.”</p>
-<figure><img src="../fig/confirm-merge-dialog.png" alt="Confirm merge dialog box" class="figure mx-auto d-block"></figure><p>The changes have been incorporated back into the <code>main</code>
+<figure><img src="../fig/confirm-merge-dialog.png" alt="Confirm merge dialog box - shows the merge commit message, an extended message, and a button to confirm the merge" class="figure mx-auto d-block"></figure><p>The changes have been incorporated back into the <code>main</code>
 branch.</p>
 <div id="time-to-merge" class="callout discussion">
 <div class="callout-square">
@@ -504,12 +504,10 @@ Request!</p>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>“New PRs can be opened in a repository from a branch or a
-fork.”</li>
-<li>“Text on PRs use Markdown styling for formatting.”</li>
-<li>“A user can interact with PRs in multiple ways: commenting,
-assigning reviewers, linking to other issues and pull requests, and
-more.”</li>
+<ul><li>New PRs can be opened in a repository from a branch or a fork.</li>
+<li>Text on PRs use Markdown styling for formatting.</li>
+<li>A user can interact with PRs in multiple ways: commenting, assigning
+reviewers, linking to other issues and pull requests, and more.</li>
 </ul></div>
 </div>
 </div>
@@ -575,7 +573,7 @@ any links that you are not going to use.
   "url": "https://INTERSECT-training.github.io/Making-Good-PRs/instructor/basic-prs.html",
   "identifier": "https://INTERSECT-training.github.io/Making-Good-PRs/instructor/basic-prs.html",
   "dateCreated": "2023-07-07",
-  "dateModified": "2024-06-27",
+  "dateModified": "2025-07-15",
   "datePublished": "2025-07-15"
 }
 
