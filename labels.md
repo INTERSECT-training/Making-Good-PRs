@@ -128,7 +128,7 @@ includes:
 Now when a new PR is opened, the "Write" section will autofill with our
 template.
 
-![](fig/new-pr-with-template.png){alt='New PR with the template above - default Title, Write section includes "Description", checklist, and extra Markdown comment that won't render in the preview'}
+![](fig/new-pr-with-template.png){alt="New PR with the template above - default Title, Write section includes Description, checklist, and extra Markdown comment that won't render in the preview"}
 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
