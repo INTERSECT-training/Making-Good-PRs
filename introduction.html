@@ -248,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="good-prs.html">4. 'Good' Pull Requests</a>
+        <a href="good-prs.html">4. Spotting 'Good' (and Bad) PRs</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -321,7 +321,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2025-07-15 |
+        <p>Last updated on 2026-06-22 |
 
         <a href="https://github.com/INTERSECT-training/Making-Good-PRs/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -366,6 +366,42 @@ changes into a code base in a manner that enables discussion and
 collaboration.</p>
 <p>In this lesson, students will learn about better practices for GitHub
 PRs.</p>
+<div id="back-to-the-starsort-team" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="back-to-the-starsort-team" class="callout-inner">
+<h3 class="callout-title">Back to the StarSort team!</h3>
+<div class="callout-content">
+<p>Remember <strong>StarSort</strong>, the (fictional) telescope-image
+tool from the Issue Tracking lesson? Last time, you filed a bug report.
+Today you get to <strong>fix it</strong> — you’ll open a pull request
+with the fix, get it reviewed by a teammate, and merge it in. That’s the
+full contributor loop.</p>
+<p>(As before, everything happens in <strong>your own practice
+repository</strong> — StarSort is just the story. Didn’t do the Issues
+lesson? No problem: anywhere we say “fix the StarSort bug,” just make a
+small change to your <code>README.md</code> instead.)</p>
+</div>
+</div>
+</div>
+<div id="where-does-genai-fit" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="where-does-genai-fit" class="callout-inner">
+<h3 class="callout-title">Where does genAI fit?</h3>
+<div class="callout-content">
+<p>Generative AI (LLMs like ChatGPT and Claude) is genuinely useful
+around PRs: drafting a clear description from your diff, generating a PR
+template, summarizing a giant changeset for a reviewer, even doing a
+first-pass review. We’ll flag the most useful spots — with the usual
+catch: <strong>AI drafts, you review.</strong></p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="how-pull-requests-fit-in-the-development-process">How Pull Requests Fit in the Development Process<a class="anchor" aria-label="anchor" href="#how-pull-requests-fit-in-the-development-process"></a></h2>
 <hr class="half-width"><figure><img src="fig/gh-pr-workflow.png" alt="From Freira et al.: Visualization of the GitHub development workflow with PRs. Workflow goes from Developer to Clone to Create a Branch to individual commits to Create Pull Request to Discussion/Project Community, ending with Merge or close the PR" class="figure mx-auto d-block"></figure><p>The development workflow can have several different formats; however,
 a simple one is this:</p>
@@ -373,44 +409,50 @@ a simple one is this:</p>
 <li>Make changes and commit back to the feature branch</li>
 <li>Open a Pull request</li>
 </ol></section><section><h2 class="section-heading" id="the-benefits-of-pull-requests">The Benefits of Pull Requests<a class="anchor" aria-label="anchor" href="#the-benefits-of-pull-requests"></a></h2>
-<hr class="half-width"><p>Integrating PRs into the development process has numerous benefits.
-Some of the main ones are:</p>
-<ul><li>
-<em>Collaboration</em>: Pull requests provide a location for other
-developers to see and comment on proposed changes. This encourages
-collaboration and discussion.</li>
-<li>
-<em>Reduce risks</em>: Other team members are able to review
-proposed changes and make suggestions, find potential risks, etc.</li>
-<li>
-<em>Improve quality</em>: No one person knows better than a group.
-Using PRs allows a crowd to get involved and improve the quality of the
-code.</li>
-</ul></section><section><h2 class="section-heading" id="github-pull-requests">GitHub Pull Requests<a class="anchor" aria-label="anchor" href="#github-pull-requests"></a></h2>
-<hr class="half-width"><p>Numerous different merging systems exist - both commercial and
-open-source, integrated and stand-alone.</p>
-<p>GitHub integrates branching and merging into their version control
-system. Every project on GitHub can use the integrated pull requests
-feature.</p>
-<figure><img src="fig/intersect-nav.png" alt="INTERSECT training repository navigation bar, showing, from left to right: Code, Issues, Pull Requests, Actions, Projects, Security, Insights" class="figure mx-auto d-block"></figure><p>To access a repository’s PRs, simply navigate to the repository root
-page and click on “Pull requests” in the navigation bar. This will take
-you to the page of all “Open” PRs.</p>
-<p>Click on a PR to open it and see its details, plus any
-discussion.</p>
-<div id="browsing-open-prs" class="callout discussion">
+<hr class="half-width"><p>Why route changes through a PR instead of committing straight to
+<code>main</code>?</p>
+<table class="table"><colgroup><col width="32%"><col width="67%"></colgroup><thead><tr><th>Benefit</th>
+<th>What it gives you</th>
+</tr></thead><tbody><tr><td><strong>Collaboration</strong></td>
+<td>A place for others to see and comment on proposed changes before
+they land.</td>
+</tr><tr><td><strong>Reduced risk</strong></td>
+<td>Teammates can catch bugs, regressions, and risky choices early.</td>
+</tr><tr><td><strong>Higher quality</strong></td>
+<td>No one person knows everything — a second set of eyes improves the
+code.</td>
+</tr></tbody></table></section><section><h2 class="section-heading" id="github-pull-requests">GitHub Pull Requests<a class="anchor" aria-label="anchor" href="#github-pull-requests"></a></h2>
+<hr class="half-width"><p>GitHub builds branching and merging right into version control: every
+project can use the <strong>Pull requests</strong> tab in the repository
+navigation bar to open, discuss, and merge PRs.</p>
+<figure><img src="fig/intersect-nav.png" alt="INTERSECT training repository navigation bar, showing, from left to right: Code, Issues, Pull Requests, Actions, Projects, Security, Insights" class="figure mx-auto d-block"></figure><div id="browsing-open-prs" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Discussion</span>
+<span class="callout-header">Challenge</span>
 <div id="browsing-open-prs" class="callout-inner">
 <h3 class="callout-title">Browsing Open PRs</h3>
 <div class="callout-content">
-<p>Navigate to <a href="https://github.com/spack/spack" class="external-link">https://github.com/spack/spack</a>
+<p>Let’s peek at a real project’s PR queue. Navigate to <a href="https://github.com/spack/spack" class="external-link">https://github.com/spack/spack</a>
 and find the pull requests page.</p>
 <ul><li>How many PRs are currently open?</li>
 <li>How many have been closed?</li>
 <li>Who is the author of the top-most PR?</li>
 </ul></div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Open/closed counts are the toggles at the top of the PR list; the top
+PR’s author is shown right under its title. Numbers change constantly —
+a busy project like spack merges PRs all day long.</p>
+</div>
+</div>
 </div>
 </div>
 <div id="keypoints1" class="callout keypoints">
@@ -491,7 +533,7 @@ any links that you are not going to use.
   "url": "https://INTERSECT-training.github.io/Making-Good-PRs/introduction.html",
   "identifier": "https://INTERSECT-training.github.io/Making-Good-PRs/introduction.html",
   "dateCreated": "2023-07-07",
-  "dateModified": "2025-07-15",
+  "dateModified": "2026-06-22",
   "datePublished": "2026-06-22"
 }
 

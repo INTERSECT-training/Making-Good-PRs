@@ -119,11 +119,11 @@
   Making Good PRs
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 17%" class="percentage">
-    17%
+<aside class="col-md-12 lesson-progress"><div style="width: 13%" class="percentage">
+    13%
   </div>
   <div class="progress intersect">
-    <div class="progress-bar intersect" role="progressbar" style="width: 17%" aria-valuenow="17" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar intersect" role="progressbar" style="width: 13%" aria-valuenow="13" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -226,7 +226,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#open-a-pr">Open a PR</a></li>
+        <ul><li><a href="#what-makes-a-good-pr">What Makes a <em>Good</em> PR?</a></li>
+<li><a href="#open-a-pr">Open a PR</a></li>
 <li><a href="#interact-with-a-pr">Interact with a PR</a></li>
 <li><a href="#merge-a-pr">Merge a PR</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -247,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="good-prs.html">4. 'Good' Pull Requests</a>
+        <a href="good-prs.html">4. Spotting 'Good' (and Bad) PRs</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -320,7 +321,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Basic Pull Requests</h1>
-        <p>Last updated on 2025-07-15 |
+        <p>Last updated on 2026-06-22 |
 
         <a href="https://github.com/INTERSECT-training/Making-Good-PRs/edit/main/episodes/basic-prs.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -339,7 +340,8 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How do you open a PR?</li>
+<ul><li>What makes a <em>good</em> PR?</li>
+<li>How do you open a PR?</li>
 <li>How do you interact with a PR?</li>
 <li>How do you merge a PR?</li>
 </ul></div>
@@ -349,13 +351,32 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Become familiar with basic actions on GitHub Pull Requests.</li>
+<ul><li>Recognize what makes a pull request easy to review.</li>
+<li>Become familiar with basic actions on GitHub Pull Requests.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="open-a-pr">Open a PR<a class="anchor" aria-label="anchor" href="#open-a-pr"></a></h2>
+<section><h2 class="section-heading" id="what-makes-a-good-pr">What Makes a <em>Good</em> PR?<a class="anchor" aria-label="anchor" href="#what-makes-a-good-pr"></a></h2>
+<hr class="half-width"><p>Before we open one, it helps to know what we’re aiming for. A PR
+that’s easy (and fast) to review tends to have the following
+characteristics:</p>
+<table class="table"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Characteristic</th>
+<th>In plain terms</th>
+</tr></thead><tbody><tr><td><strong>One cohesive change</strong></td>
+<td>A PR should do <em>one</em> thing. Don’t bundle a bugfix, a rename,
+and a new feature together — they can’t be reviewed or reverted
+independently.</td>
+</tr><tr><td><strong>Reasonable size</strong></td>
+<td>Hundreds of changed lines are miserable to review. If a change is
+big, split it into smaller PRs.</td>
+</tr><tr><td><strong>Descriptive what / how / why</strong></td>
+<td>The title and description should answer: <em>what</em> changed,
+<em>how</em> it changed (and side effects), and <em>why</em>.</td>
+</tr></tbody></table><p>Keep these in mind for the PR you’re about to open — we’ll practice
+spotting violations later.</p>
+</section><section><h2 class="section-heading" id="open-a-pr">Open a PR<a class="anchor" aria-label="anchor" href="#open-a-pr"></a></h2>
 <hr class="half-width"><p>A PR cannot be opened without some changes to be incorporated. For
 this example, we will use the <code>branch</code> and <code>merge</code>
 workflow; however, another common method is the <code>fork</code>,
@@ -376,46 +397,56 @@ Do whatever feels right for you!</p>
 </div>
 <div class="section level3">
 <h3 id="make-a-change">Make a Change<a class="anchor" aria-label="anchor" href="#make-a-change"></a></h3>
-<p>First we will make a change to a file in our repository. We click on
-the preferred file in the repository and hit the “Edit” pencil in the
-top-right corner.</p>
-<figure><img src="fig/prs-edit-file.png" alt="On a README file, the File edit button in the top-right is highlighted" class="figure mx-auto d-block"></figure><p>Once the file is edited to our satisfaction, we click “Commit
-changes…”, which pops up a dialog box asking us to fill in the commit
-message.</p>
-<figure><img src="fig/prs-commit-dialog.png" alt='Commit changes pop-up dialog with the sections Commit message, Extended commit message, and the radio option for "Commit directly to `main`" or "Create a new branch" circled' class="figure mx-auto d-block"></figure><p>Rather than committing directly to the main branch, we will instead
-make a new branch with the changes.</p>
-<figure><img src="fig/prs-new-branch-dialog.png" alt='Commit changes pop-up dialog, zoomed in on the "Create a new branch" radio button when clicked, which defaults a branch name that can be changed' class="figure mx-auto d-block"></figure><p>GitHub will autopopulate a branch name for us. We can choose to keep
-it or change it.</p>
-</div>
+<p>Edit a file in your repository (click the file, then the
+<strong>Edit</strong> pencil). When you’re happy with it, click
+<strong>Commit changes…</strong> to open the commit dialog.</p>
+<figure><img src="fig/prs-commit-dialog.png" alt='Commit changes pop-up dialog with the sections Commit message, Extended commit message, and the radio option for "Commit directly to `main`" or "Create a new branch" circled' class="figure mx-auto d-block"></figure><p>Rather than committing directly to <code>main</code>, choose
+<strong>Create a new branch</strong>. GitHub autofills a branch name,
+which you can keep or change.</p>
+<figure><img src="fig/prs-new-branch-dialog.png" alt='Commit changes pop-up dialog, zoomed in on the "Create a new branch" radio button when clicked, which defaults a branch name that can be changed' class="figure mx-auto d-block"></figure></div>
 <div class="section level3">
 <h3 id="make-a-pr">Make a PR<a class="anchor" aria-label="anchor" href="#make-a-pr"></a></h3>
-<p>Once we click “Commit changes,” the page will load the “Open a pull
-request” page with our commit message as the title.</p>
-<figure><img src="fig/prs-new-pr-default.png" alt='Open a pull request page loaded - shows the commit message from the previous step as the Title, empty "Write" section' class="figure mx-auto d-block"></figure><p>A new PR has several parts:</p>
-<ul><li>
-<em>Title</em>: This will display on the main “Pull request”
-page.</li>
-<li>
-<em>Write</em>: This is an open area for the details of the PR.
-GitHub support Markdown formatting.</li>
-<li>
-<em>Preview</em>: This will preview the Markdown-rendered version of
-the details.</li>
-</ul><p>To open the issue, click the “Create pull request” button.</p>
-<figure><img src="fig/prs-new-pr-view.png" alt="Newly opened PR with proposed changes - main page shows the Title, description, list of commits, and merge options" class="figure mx-auto d-block"></figure><div id="open-a-new-pr" class="callout discussion">
+<p>Committing to the new branch loads the <strong>Open a pull
+request</strong> page, pre-filled with your commit message as the title.
+Like an issue, a PR has a <strong>Title</strong>, a
+<strong>Write</strong> area (Markdown), and a <strong>Preview</strong>.
+Fill in the description, then click <strong>Create pull
+request</strong>.</p>
+<figure><img src="fig/prs-new-pr-view.png" alt="Newly opened PR with proposed changes - main page shows the Title, description, list of commits, and merge options" class="figure mx-auto d-block"></figure><div id="open-your-starsort-fix" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="open-a-new-pr" class="callout-inner">
-<h3 class="callout-title">Open a New PR</h3>
+<div id="open-your-starsort-fix" class="callout-inner">
+<h3 class="callout-title">Open Your StarSort Fix</h3>
 <div class="callout-content">
-<p>Navigate to your practice repository.</p>
-<ul><li>Make a change to your <code>README.md</code> file</li>
-<li>Commit the changes to a new branch</li>
-<li>Put a basic title and details</li>
-<li>Create the PR</li>
+<p>Time to fix that StarSort bug! In <strong>your practice
+repository</strong>:</p>
+<ul><li>Make a change to your <code>README.md</code> (pretend it’s the code
+that fixes the empty-folder crash).</li>
+<li>Commit it to a <strong>new branch</strong>.</li>
+<li>Open a PR — and write a description with <strong>what / how /
+why</strong> (use the good-PR table above, not just a one-word
+title!).</li>
+<li>Create the PR.</li>
 </ul></div>
+</div>
+</div>
+<div id="genai-draft-the-description-from-your-diff" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="genai-draft-the-description-from-your-diff" class="callout-inner">
+<h3 class="callout-title">GenAI: Draft the description from your
+diff</h3>
+<div class="callout-content">
+<p>Staring at a blank description box? Paste your diff into an LLM and
+ask for a PR description with what/how/why sections. It’s a fast first
+draft — but <strong>check it</strong>: the AI can describe <em>what</em>
+changed from the diff, but only <em>you</em> know the <em>why</em>. Fix
+anything that it hallucinated.</p>
+</div>
 </div>
 </div>
 </div>
@@ -441,18 +472,19 @@ the relevant Issue using <code>#</code> and the Issue number.</p>
 changes.</td>
 </tr><tr><td>Labels</td>
 <td>Assign label(s) to categorize the PR.</td>
-</tr></tbody></table><div id="assignment-time" class="callout discussion">
+</tr></tbody></table><div id="link-it-up" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="assignment-time" class="callout-inner">
-<h3 class="callout-title">Assignment Time</h3>
+<div id="link-it-up" class="callout-inner">
+<h3 class="callout-title">Link It Up</h3>
 <div class="callout-content">
-<p>Navigate to your PR from the previous exercise.</p>
-<ul><li>Add yourself as the <code>Assignee</code>
-</li>
-<li>Mention one of your open Issues</li>
+<p>Navigate to your StarSort PR from the previous exercise.</p>
+<ul><li>Add yourself as the <code>Assignee</code>.</li>
+<li>In the description or a comment, link the StarSort bug issue you
+filed earlier using <code>#</code> and its number (or any open issue, if
+you don’t have one).</li>
 </ul></div>
 </div>
 </div>
@@ -484,15 +516,15 @@ appears, prompting for the commit message. Once you have made the
 preferred edits, click “Confirm merge.”</p>
 <figure><img src="fig/confirm-merge-dialog.png" alt="Confirm merge dialog box - shows the merge commit message, an extended message, and a button to confirm the merge" class="figure mx-auto d-block"></figure><p>The changes have been incorporated back into the <code>main</code>
 branch.</p>
-<div id="time-to-merge" class="callout discussion">
+<div id="ship-the-fix" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="time-to-merge" class="callout-inner">
-<h3 class="callout-title">Time to Merge</h3>
+<div id="ship-the-fix" class="callout-inner">
+<h3 class="callout-title">Ship the Fix</h3>
 <div class="callout-content">
-<p>Navigate to your PR from the previous exercises.</p>
+<p>Navigate to your StarSort PR from the previous exercises.</p>
 <ul><li>Click “Merge pull request”</li>
 <li>Modify the merge message</li>
 <li>Merge!</li>
@@ -508,10 +540,14 @@ Request!</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>New PRs can be opened in a repository from a branch or a fork.</li>
+<ul><li>A good PR makes one cohesive change, stays a reasonable size, and
+describes what/how/why.</li>
+<li>New PRs can be opened in a repository from a branch or a fork.</li>
 <li>Text on PRs use Markdown styling for formatting.</li>
 <li>A user can interact with PRs in multiple ways: commenting, assigning
 reviewers, linking to other issues and pull requests, and more.</li>
+<li>GenAI can draft a PR description from your diff, but only you know
+the <em>why</em> — verify it.</li>
 </ul></div>
 </div>
 </div>
@@ -579,7 +615,7 @@ any links that you are not going to use.
   "url": "https://INTERSECT-training.github.io/Making-Good-PRs/basic-prs.html",
   "identifier": "https://INTERSECT-training.github.io/Making-Good-PRs/basic-prs.html",
   "dateCreated": "2023-07-07",
-  "dateModified": "2025-07-15",
+  "dateModified": "2026-06-22",
   "datePublished": "2026-06-22"
 }
 
