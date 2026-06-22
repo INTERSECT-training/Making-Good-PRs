@@ -1,22 +1,37 @@
 ---
 title: "Basic Pull Requests"
 teaching: 10
-exercises: 5
+exercises: 6
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
+- Recognize what makes a pull request easy to review.
 - Become familiar with basic actions on GitHub Pull Requests.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
+- What makes a *good* PR?
 - How do you open a PR?
 - How do you interact with a PR?
 - How do you merge a PR?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## What Makes a *Good* PR?
+
+Before we open one, it helps to know what we're aiming for. A PR that's easy (and fast) to
+review tends to have the following characteristics:
+
+| Characteristic | In plain terms |
+|----------------|----------------|
+| **One cohesive change** | A PR should do *one* thing. Don't bundle a bugfix, a rename, and a new feature together — they can't be reviewed or reverted independently. |
+| **Reasonable size** | Hundreds of changed lines are miserable to review. If a change is big, split it into smaller PRs. |
+| **Descriptive what / how / why** | The title and description should answer: *what* changed, *how* it changed (and side effects), and *why*. |
+
+Keep these in mind for the PR you're about to open — we'll practice spotting violations later.
 
 ## Open a PR
 
@@ -36,54 +51,47 @@ Do whatever feels right for you!
 
 ### Make a Change
 
-First we will make a change to a file in our repository. We click on the
-preferred file in the repository and hit the "Edit" pencil in the top-right
-corner.
-
-![](fig/prs-edit-file.png){alt='On a README file, the File edit button in the top-right is highlighted'}
-
-Once the file is edited to our satisfaction, we click "Commit changes...",
-which pops up a dialog box asking us to fill in the commit message.
+Edit a file in your repository (click the file, then the **Edit** pencil). When you're happy
+with it, click **Commit changes…** to open the commit dialog.
 
 ![](fig/prs-commit-dialog.png){alt='Commit changes pop-up dialog with the sections Commit message, Extended commit message, and the radio option for "Commit directly to `main`" or "Create a new branch" circled'}
 
-Rather than committing directly to the main branch, we will instead make a
-new branch with the changes.
+Rather than committing directly to `main`, choose **Create a new branch**. GitHub autofills a
+branch name, which you can keep or change.
 
 ![](fig/prs-new-branch-dialog.png){alt='Commit changes pop-up dialog, zoomed in on the "Create a new branch" radio button when clicked, which defaults a branch name that can be changed'}
 
-GitHub will autopopulate a branch name for us. We can choose to keep it or
-change it.
-
 ### Make a PR
 
-Once we click "Commit changes," the page will load the "Open a pull request"
-page with our commit message as the title.
-
-![](fig/prs-new-pr-default.png){alt='Open a pull request page loaded - shows the commit message from the previous step as the Title, empty "Write" section'}
-
-A new PR has several parts:
-
-- _Title_: This will display on the main "Pull request" page.
-- _Write_: This is an open area for the details of the PR. GitHub support Markdown formatting.
-- _Preview_: This will preview the Markdown-rendered version of the details.
-
-To open the issue, click the "Create pull request" button.
+Committing to the new branch loads the **Open a pull request** page, pre-filled with your commit
+message as the title. Like an issue, a PR has a **Title**, a **Write** area (Markdown), and a
+**Preview**. Fill in the description, then click **Create pull request**.
 
 ![](fig/prs-new-pr-view.png){alt='Newly opened PR with proposed changes - main page shows the Title, description, list of commits, and merge options'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Open a New PR
+## Open Your StarSort Fix
 
-Navigate to your practice repository.
- 
-* Make a change to your `README.md` file
-* Commit the changes to a new branch
-* Put a basic title and details
-* Create the PR
+Time to fix that StarSort bug! In **your practice repository**:
+
+* Make a change to your `README.md` (pretend it's the code that fixes the empty-folder crash).
+* Commit it to a **new branch**.
+* Open a PR — and write a description with **what / how / why** (use the good-PR table
+  above, not just a one-word title!).
+* Create the PR.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::  callout
+
+## GenAI: Draft the description from your diff
+
+Staring at a blank description box? Paste your diff into an LLM and ask for a PR description with
+what/how/why sections. It's a fast first draft — but **check it**: the AI can describe *what*
+changed from the diff, but only *you* know the *why*. Fix anything that it hallucinated.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Interact with a PR
 
@@ -122,12 +130,13 @@ We will cover the following options:
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Assignment Time
+## Link It Up
 
-Navigate to your PR from the previous exercise.
- 
-* Add yourself as the `Assignee`
-* Mention one of your open Issues
+Navigate to your StarSort PR from the previous exercise.
+
+* Add yourself as the `Assignee`.
+* In the description or a comment, link the StarSort bug issue you filed earlier using `#` and
+  its number (or any open issue, if you don't have one).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -167,10 +176,10 @@ The changes have been incorporated back into the `main` branch.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Time to Merge
+## Ship the Fix
 
-Navigate to your PR from the previous exercises.
- 
+Navigate to your StarSort PR from the previous exercises.
+
 * Click "Merge pull request"
 * Modify the merge message
 * Merge!
@@ -181,8 +190,10 @@ You now know the basic actions you can take on a GitHub Pull Request!
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
+- A good PR makes one cohesive change, stays a reasonable size, and describes what/how/why.
 - New PRs can be opened in a repository from a branch or a fork.
 - Text on PRs use Markdown styling for formatting.
 - A user can interact with PRs in multiple ways: commenting, assigning reviewers, linking to other issues and pull requests, and more.
+- GenAI can draft a PR description from your diff, but only you know the *why* — verify it.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

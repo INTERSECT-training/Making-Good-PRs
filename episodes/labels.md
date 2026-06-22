@@ -1,7 +1,7 @@
 ---
 title: "Labels and Templates"
-teaching: 5
-exercises: 10
+teaching: 4
+exercises: 8
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -23,7 +23,9 @@ exercises: 10
 Each new GitHub repository comes with a set of default labels that can be
 assigned to issues, pull requests, or discussions.
 
-From [GitHub's official documentation](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#about-default-labels):
+(If you took the Issue Tracking lesson, you'll recognize these — labels are shared across issues
+*and* PRs in a repo.) From
+[GitHub's official documentation](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#about-default-labels):
 
 | Label | Description |
 | ----- | ----------- |
@@ -43,30 +45,20 @@ These labels can be viewed from the Issues and Pull Requests pages.
 
 ## Using Labels
 
-Labels can be applied from the main Pull requests page or within a single PR.
-
-From the main Pull requests page, simply checkmark the PR, hit the "Label"
-dropdown, select your preferred label(s), and click outside of the
-dropdown.
-
-![](fig/apply-labels-prs-page.png){alt='Display of the "Apply Labels" dropdown from the main Pull requests page - shows all of the label colors and names'}
-
-To apply within a single PR, click on the PR to open it. Then you
-will see the "Labels" option on the right-hand side.
-
-Click on "Labels". A dropdown will appear in which you can select or deselect
-your preferred label(s).
+Apply labels two ways: from the **main Pull requests page** (checkmark a PR > "Label" dropdown >
+pick label(s)), or **inside a single PR** via the **Labels** option on the right-hand side.
 
 ![](fig/label-dropdown-in-pr.png){alt='Cog-wheel option selected to reveal the label dropdown within a single pull request'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Stick the Label
+## Tag Your StarSort PR
 
-Navigate to your practice repository's PR page.
- 
-* Make another small change to your `README.md` and open a PR
-* Add the `documentation` label
+A reviewer should know your StarSort PR touches the docs as well as the fix. In **your practice
+repository's** PR page:
+
+* Make another small change to your `README.md` and open a PR.
+* Add the `documentation` label.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -112,16 +104,29 @@ You can now put whatever content you desire in the template. Some examples are:
 Once the template has the preferred information, commit the changes to the `main`
 branch.
 
+::::::::::::::::::::::::::::::::::::::::::  callout
+
+## GenAI: Generate a starter template
+
+Templates are structured boilerplate — exactly what LLMs do well. Try asking:
+*"Write a GitHub PULL_REQUEST_TEMPLATE.md for a research software project, with a description
+section, a what/how/why prompt, and a reviewer checklist."* You'll get a reasonable draft.
+Then **adjust it** to what your team will actually fill in — "less is more" applies to templates
+too.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Make that Template
+## Make the StarSort Template
 
-Navigate to your practice repository's PR page. Create a PR Template that
-includes:
+The StarSort maintainers want every PR opened to be consistent. In **your practice
+repository**, create a `PULL_REQUEST_TEMPLATE.md` that includes:
 
-* Description
-* Checklist with two steps
-* (CHALLENGE) Add a comment that does not render in Markdown to provide extra information for the submitter
+* A **Description** section
+* A **checklist** with two steps (e.g., "tests pass", "docs updated")
+* (CHALLENGE) Add a Markdown comment (`<!-- ... -->`) with a tip for the submitter that won't
+  render in the final PR
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -135,5 +140,6 @@ template.
 
 - Labelling PRs can help with prioritization and organization.
 - PR Templates can provide clear instructions for steps, expectations, and more.
+- GenAI can draft a PR template quickly — adjust it to fit your team.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
