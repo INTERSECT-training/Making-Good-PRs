@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-teaching: 5
-exercises: 5
+teaching: 4
+exercises: 4
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -32,6 +32,31 @@ into a code base in a manner that enables discussion and collaboration.
 
 In this lesson, students will learn about better practices for GitHub PRs.
 
+::::::::::::::::::::::::::::::::::::::::::  callout
+
+## Back to the StarSort team!
+
+Remember **StarSort**, the (fictional) telescope-image tool from the Issue Tracking lesson?
+Last time, you filed a bug report. Today you get to **fix it** — you'll open a pull request with
+the fix, get it reviewed by a teammate, and merge it in. That's the full contributor loop.
+
+(As before, everything happens in **your own practice repository** — StarSort is just the story.
+Didn't do the Issues lesson? No problem: anywhere we say "fix the StarSort bug," just make a
+small change to your `README.md` instead.)
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::  callout
+
+## Where does genAI fit?
+
+Generative AI (LLMs like ChatGPT and Claude) is genuinely useful around PRs: drafting a clear
+description from your diff, generating a PR template, summarizing a giant changeset for a
+reviewer, even doing a first-pass review. We'll flag the most useful spots — with the usual catch:
+**AI drafts, you review.**
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## How Pull Requests Fit in the Development Process
 
 ![](fig/gh-pr-workflow.png){alt='From Freira et al.: Visualization of the GitHub development workflow with PRs. Workflow goes from Developer to Clone to Create a Branch to individual commits to Create Pull Request to Discussion/Project Community, ending with Merge or close the PR'}
@@ -45,38 +70,39 @@ one is this:
 
 ## The Benefits of Pull Requests
 
-Integrating PRs into the development process has numerous benefits. Some
-of the main ones are:
+Why route changes through a PR instead of committing straight to `main`?
 
-- _Collaboration_: Pull requests provide a location for other developers to see and comment on proposed changes. This encourages collaboration and discussion.
-- _Reduce risks_: Other team members are able to review proposed changes and make suggestions, find potential risks, etc.
-- _Improve quality_: No one person knows better than a group. Using PRs allows a crowd to get involved and improve the quality of the code.
+| Benefit | What it gives you |
+|---------|-------------------|
+| **Collaboration** | A place for others to see and comment on proposed changes before they land. |
+| **Reduced risk** | Teammates can catch bugs, regressions, and risky choices early. |
+| **Higher quality** | No one person knows everything — a second set of eyes improves the code. |
 
 ## GitHub Pull Requests
 
-Numerous different merging systems exist - both commercial and open-source,
-integrated and stand-alone.
-
-GitHub integrates branching and merging into their version control system. Every project
-on GitHub can use the integrated pull requests feature.
+GitHub builds branching and merging right into version control: every project can use the
+**Pull requests** tab in the repository navigation bar to open, discuss, and merge PRs.
 
 ![](fig/intersect-nav.png){alt='INTERSECT training repository navigation bar, showing, from left to right: Code, Issues, Pull Requests, Actions, Projects, Security, Insights'}
-
-To access a repository's PRs, simply navigate to the repository root
-page and click on "Pull requests" in the navigation bar. This will take you to the
-page of all "Open" PRs.
-
-Click on a PR to open it and see its details, plus any discussion.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Browsing Open PRs
 
-Navigate to [https://github.com/spack/spack](https://github.com/spack/spack) and find the pull requests page.
- 
+Let's peek at a real project's PR queue. Navigate to
+[https://github.com/spack/spack](https://github.com/spack/spack) and find the pull requests
+page.
+
 * How many PRs are currently open?
 * How many have been closed?
 * Who is the author of the top-most PR?
+
+:::::::::::::::::::::: solution
+
+Open/closed counts are the toggles at the top of the PR list; the top PR's author is shown right
+under its title. Numbers change constantly — a busy project like spack merges PRs all day long.
+
+::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

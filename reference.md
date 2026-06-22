@@ -6,3 +6,16 @@
 - Martin, R. C. (2003). Agile software development: principles, patterns, and practices. Prentice Hall PTR.
 - Morina, F. (2022, December 1). _Benefits of Using Pull Requests for Collaboration and Code Review._ NVIDIA Technical Blog. https://developer.nvidia.com/blog/benefits-of-using-pull-requests-for-collaboration-and-code-review/
 - Urna, H. (2020, May 19). _Pull Request Workflow with Git_. Medium. https://medium.com/@urna.hybesis/pull-request-workflow-with-git-6-steps-guide-3858e30b5fa4
+
+## Writing and Reviewing PRs
+
+- [Reviewing changes in pull requests (GitHub Docs)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
+- [Creating a pull request template for your repository (GitHub Docs)](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+- [Conventional Comments](https://conventionalcomments.org/) — a style for clear, kind review feedback
+
+## GenAI for Pull Requests
+
+- General-purpose assistants (e.g., ChatGPT, Claude) can draft a PR description from a diff,
+  generate a PR template, summarize a large changeset, and do a first-pass review. They miss
+  project intent and can be confidently wrong — verify the output, and the human owns the merge
+  decision. For research code, check data/IP policy before sharing a private diff.

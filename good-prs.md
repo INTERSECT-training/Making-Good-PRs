@@ -1,95 +1,85 @@
 ---
-title: "'Good' Pull Requests"
-teaching: 5
-exercises: 0
+title: "Spotting 'Good' (and Bad) PRs"
+teaching: 4
+exercises: 5
 ---
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Become familiar with what makes a 'good' PR.
+- Recall the characteristics of a good pull request.
+- Practice diagnosing and fixing problematic PRs.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - What does it mean to be a 'good' PR?
-- What should you do to make a 'good' PR?
+- How do you fix a PR that breaks the rules?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## What makes a 'Good' Pull request?
+## Recap: the Characteristics of a Good PR
 
-Now that we are familiar with the basic makeup of a pull request, we want
-to address the question, "What makes a good pull request?"
+You met these when you opened your StarSort PR. Here they are in one place:
 
-There are many answers to this question, and, like anything, there is no
-single right answer, but here are some useful tips.
+| Characteristic | The short version |
+|-------|-------------------|
+| **One cohesive change** | One PR = one logical thing. (This is the *single-responsibility* idea: a unit should answer to one purpose.) |
+| **Reasonable size** | Small PRs get reviewed faster and more carefully. Split big ones. |
+| **What / how / why** | The description says what changed, how (incl. side effects), and why. |
 
-### The Single Responsibility Principle
+None of these are absolute rules — but a PR that follows all three is a gift to whoever reviews
+it (often future you).
 
-One of the SOLID principles, the Single Responsibility Principle says, "A
-module should be responsible to one, and only one, actor." This principle
-also applies for pull requests.
+## Now You're the Reviewer
 
-When making changes and getting ready to submit a PR, the changes within that
-PR should all be related and, ideally, doing _one_ clear thing.
+Knowing the habits is one thing; *spotting* where they're broken is the real skill. Let's
+practice on a few PRs that just landed in StarSort's queue.
 
-This will make it easier to review and to ensure that changes don't introduce
-new, seemingly "unrelated" bugs.
+:::::::::::::::::::::::::::::::::::::::  challenge
 
+## Spot the Problem
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+For each PR below, name what's wrong and what you'd ask the author to do.
 
-## Do one thing, and one thing only
+1. **PR #41 — "updates"** — changes 14 files: fixes the empty-folder crash, renames a function
+   used across the codebase, *and* adds a brand-new export feature. Description is blank.
+2. **PR #42 — "fix"** — a one-line bugfix. Title is just "fix"; no description.
+3. **PR #43 — "Refactor everything before the release"** — 2,300 changed lines across 60 files,
+   with the description: "cleaned things up."
 
-If your PR has many unrelated changes together, separate it into multiple
-different PRs.
+:::::::::::::::::::::: solution
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+1. **Does too many things at once** (violates one-cohesive-change) *and* has no description.
+   Ask the author to split it into three PRs — bugfix, rename, feature — each described.
+2. **Not descriptive.** The change may be fine, but "fix" tells a reviewer nothing. Ask for a
+   real title and a one-line *what/why* (e.g., "Fix off-by-one in image index that skipped the
+   last file").
+3. **Too big** *and* **vague**. A 2,300-line "cleanup" is nearly unreviewable. Ask the author to
+   break it into focused PRs (one refactor per PR) with descriptions of what and why.
 
-### Reasonable Size
-
-Have you ever been assigned to review a PR with several hundreds or thousands
-of line changes? These are monstrous, difficult to review, and can take much
-longer to merge back into the code base.
-
-Keep your PRs a reasonable size! Some changes are, in fact, just big; however,
-if you can, split big changes into several smaller PRs to increase the
-reviewability and make discussions more productive.
-
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## Break it down
-
-If your PR is very large, split it into smaller PRs.
+::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Be Descriptive
+::::::::::::::::::::::::::::::::::::::::::  callout
 
-When making your PR, be descriptive in the title and description. Include
-the answers to common questions:
+## GenAI: A first-pass reviewer (with limits)
 
-1. What is being changed?
-1. How did it change (and what other effects might there be)?
-1. Why is this change being suggested?
+LLMs can give a PR a quick first look — flag style issues, summarize a huge diff so a human
+reviewer knows where to focus, or suggest a clearer description. But they have real limits: they
+miss project **intent and context**, can be **confidently wrong**, and don't carry
+accountability. Use AI to *prepare* a review, not to *make a decision* — a human still owns the
+decision to merge. (And for research code, check data/IP policy before pasting a private diff
+into a third-party tool.)
 
-Putting the answer to these questions in the description section of the PR
-will make it clear the motivation and give a higher level overview for reviewers
-so they know more about the suggested changes.
-
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## What, How, Why
-
-Preemptively answer common questions in the description of your PR to
-streamline the review process.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - A pull request should contain _ONE_ cohesive change.
 - A pull request should, ideally, be quickly reviewable.
 - A pull request description should give an overview of what, how, and why something changed.
+- Diagnosing an oversized, unfocused, or undescribed PR is a core reviewer skill.
+- GenAI can assist a review (summaries, first pass) but the human owns the merge decision.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

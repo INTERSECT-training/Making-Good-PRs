@@ -81,10 +81,15 @@ doesn't allow authors to do either of these actions.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Let's Review
+## Review a Teammate's StarSort Fix
 
-Partner up with another participant and navigate to their practice repository.
-Add a few comments to one of their PRs and submit the review, requesting changes.
+Time to be the maintainer! Partner up with another participant (you'll need to add each other as
+collaborators, or work on a shared repo). Navigate to their practice repository, open one of
+their StarSort PRs, and:
+
+* Add a couple of line comments using the `+` button — be **kind and specific** (suggest, don't
+  just criticize).
+* Submit the review **requesting changes**.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -105,9 +110,22 @@ and re-request a review.
 
 ## Fix It
 
-Address the changes your partner requested and re-request a review from them.
+Address the changes your partner requested on your StarSort fix, push the updates, then
+re-request a review from them.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::  callout
+
+## GenAI: A reviewer's assistant
+
+AI review assistants (in GitHub, your IDE, or a chat tool) can do a useful *first pass* — flag
+likely bugs, summarize a big diff, or check style — before a human looks. Treat their output as
+suggestions to verify, not verdicts: they miss intent and can be confidently wrong, and a human
+still owns the approve/merge decision. For research code, mind data/IP policy before sharing a
+private diff.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 And that’s all, folks! You now know much more about GitHub Pull Requests.
 
@@ -115,5 +133,7 @@ And that’s all, folks! You now know much more about GitHub Pull Requests.
 
 - Code reviews are integrated into GitHub Pull requests.
 - Reviewers can approve, request changes, or simply add comments as part of the review process.
+- Good review comments are kind and specific.
+- GenAI can assist a review, but the human owns the merge decision.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
