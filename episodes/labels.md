@@ -128,6 +128,29 @@ repository**, create a `PULL_REQUEST_TEMPLATE.md` that includes:
 * (CHALLENGE) Add a Markdown comment (`<!-- ... -->`) with a tip for the submitter that won't
   render in the final PR
 
+:::::::::::::::::::::: solution
+
+Create `.github/PULL_REQUEST_TEMPLATE.md`. Exact wording will vary, but it should include the
+required sections and a non-rendering comment:
+
+```markdown
+<!-- These are special instructions for the editor that do NOT render in the posted PR. -->
+
+## Description
+
+<!-- What does this PR change, how, and why? -->
+
+## Checklist
+
+- [ ] Tests pass
+- [ ] Docs updated
+```
+
+After committing to `main`, open a new PR to confirm the "Write" box auto-fills
+with your template.
+
+::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Now when a new PR is opened, the "Write" section will autofill with our
