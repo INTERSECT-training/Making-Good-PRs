@@ -30,6 +30,8 @@ You met these when you opened your StarSort PR. Here they are in one place:
 None of these are absolute rules — but a PR that follows all three is a gift to whoever reviews
 it (often future you).
 
+![](fig/pr-train.png){alt='A three-pane comic depicting a person being asked to review a PR, then that person is hit by a train that has the words "326 files changed" on the side of it.'}
+
 ## Now You're the Reviewer
 
 Knowing the habits is one thing; *spotting* where they're broken is the real skill. Let's
